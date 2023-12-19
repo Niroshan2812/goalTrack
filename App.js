@@ -2,17 +2,22 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View , FlatList} from "react-native";
 
 
-const days = [1,2];
+const days = [1,2,3,4,5,6,7,8,9];
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      {days.map((day) => (
-        <View style={styles.box} key={day}>
-        <Text style={styles.text}>{day}</Text>
-      </View>
-      ))}
+      <FlatList 
+        data={days}
+        renderItem={({item})=>  (
+          <View style={styles.box}>
+          <Text style={styles.text}>{item}</Text>
+        </View>
+        )}
+      />
+
+      
 
       <StatusBar style="auto" />
     </View>
