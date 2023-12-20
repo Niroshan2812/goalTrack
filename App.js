@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View , FlatList} from "react-native";
 
-
+ // ending time = 1.09
 const days = [1,2,3,4,5,6,7,8,9];
 
 export default function App() {
@@ -10,6 +10,8 @@ export default function App() {
 
       <FlatList 
         data={days}
+        contentContainerStyle={styles.content}
+        numColumns={2}
         renderItem={({item})=>  (
           <View style={styles.box}>
           <Text style={styles.text}>{item}</Text>
@@ -28,16 +30,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+   
 
-    gap: 10,
+    
+  },
+
+  content:{
+    gap:10,
   },
 
   box: {
     backgroundColor: "#f9EDE3",
-    width: 300,
-    height: 300,
+   
+    flex :1,
+    aspectRatio:1,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "#9B4521",
     borderRadius: 20,
