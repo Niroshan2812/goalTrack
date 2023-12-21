@@ -16,11 +16,7 @@ export default function App() {
         contentContainerStyle={styles.content}
         columnWrapperStyle = {styles.coloum}
         numColumns={2}
-        renderItem={({item})=>  (
-          <View style={styles.box}>
-          <Text style={styles.text}>{item}</Text>
-        </View>
-        )}
+        renderItem={({item})=> <DayListItem day={item}/>}
       />
 
       
@@ -33,10 +29,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-   
-
-    
+    backgroundColor: "#fff",  
   },
   coloum:{
     gap:10,
@@ -47,20 +40,5 @@ const styles = StyleSheet.create({
     padding:10
   },
 
-  box: {
-    backgroundColor: "#f9EDE3",
-   
-    flex :1,
-    aspectRatio:1,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "#9B4521",
-    borderRadius: 20,
-
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    color: "#9B4521",
-    fontSize: 70,
-  },
+  
 });
