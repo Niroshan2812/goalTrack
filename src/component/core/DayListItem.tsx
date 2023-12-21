@@ -1,6 +1,10 @@
 import{Text, View, StyleSheet} from 'react-native';
 
-export default function DayListItem ({day}) {
+type DayListItem ={
+    day:number;
+};
+
+export default function DayListItem ({day}:DayListItem) {
 
     return (
     <View style={styles.box}>
@@ -25,6 +29,7 @@ const styles = StyleSheet.create({
     text: {
       color: "#9B4521",
       fontSize: 70,
+      fontFamily:'Inter',
     },
   });
   
