@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 
 import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
+import {AmaticSC_400Reguler,AmaticSC_700Bold, } from '@expo-google-fonts/amatic-sc';
 import * as SplashScreen from 'expo-splash-screen';
 
  // ending time = 1.09
@@ -18,6 +19,8 @@ export default function App() {
 
  const [fontsLoaded, fontError] = useFonts({
     Inter: Inter_900Black,
+    Amatic: AmaticSC_400Reguler,
+    AmaticBold:AmaticSC_700Bold,
   });
 
   useEffect(()=>{
